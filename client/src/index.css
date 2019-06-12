@@ -75,3 +75,67 @@ body {
   color: red;
   text-align: center;
 }
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.movie-list button {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a h2 {
+  color: blue;
+  text-decoration: underline;
+}
+
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.add-movie-form input {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.add-movie-form button {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.add-star-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-star-form input {
+  width: 80%
+}
+
+.add-star-form button {
+  height: 100%;
+}
+
+ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.stars {
+  margin: 0;
+  font-size: 15px;
+}
