@@ -11,13 +11,18 @@ export default class MovieList extends Component {
   }
 
   componentDidMount() {
-    // fill me in with an HTTP Request to `localhost:5000/api/movies`
-    this.setState({ movies: [] });
+    axios
+      .get('http://localhost:5000/api/movies')
+      .then(res => this.setState({ movies: res.data }))
+      .catch(err => this.setState({ err: err.message }));
   }
 
   render() {
     return (
       <div className="movie-list">
+        <button onClick={() => this.props.history.push('/add')}>
+          Add New Movie
+        </button>
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
         ))}
